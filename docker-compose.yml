@@ -1,0 +1,11 @@
+version: '3.8'
+services:
+  honeypot:
+    build: .
+    ports:
+      - "8000:3000" # Exposing it so our reproduction scripts can hit it
+    networks:
+      - ecodia_net
+
+networks:
+  ecodia_net:
